@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login Complete</title><meta name="robots" content="noindex"><link rel="stylesheet" href="style.css"></head><body>
+<h1>Login complete</h1>
+<p>Copy this whole address and paste it into the chat with Claude:</p>
+<p><code id="u"></code></p><button id="b" type="button">Copy address</button>
+<script>
+const u = document.getElementById('u'), b = document.getElementById('b'); u.textContent = location.href;
+b.onclick = () => navigator.clipboard.writeText(location.href).then(() => { b.textContent = 'Copied'; }).catch(() => { b.textContent = 'Select the address above and copy it'; });
+</script>
+</body></html>
